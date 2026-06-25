@@ -1,0 +1,1301 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfólio Planurbi — Conagreste</title>
+<link href="https://fonts.googleapis.com/css2?family=Hauora+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --azul: #B5D4F4;
+    --azul-mid: #378ADD;
+    --azul-deep: #185FA5;
+    --azul-dark: #0C447C;
+    --terra: #C1774A;
+    --terra-light: #E8C4A8;
+    --terra-dark: #7A3F20;
+    --verde: #1D6B4A;
+    --verde-dark: #0E3D28;
+    --cinza-0: #F7F6F3;
+    --cinza-1: #ECEAE4;
+    --cinza-2: #C8C6BC;
+    --cinza-3: #7A7870;
+    --cinza-4: #3A3934;
+    --branco: #FFFFFF;
+    --texto: #1E1D1A;
+    --texto-sec: #5A5850;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Hauora Sans', 'Segoe UI', Arial, sans-serif;
+    background: var(--cinza-0);
+    color: var(--texto);
+    line-height: 1.65;
+    font-size: 15px;
+  }
+
+  /* ── CAPA ── */
+  .capa {
+    background: var(--verde-dark);
+    color: var(--branco);
+    padding: 80px 64px 72px;
+    position: relative;
+    overflow: hidden;
+    min-height: 480px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  .capa::before {
+    content: '';
+    position: absolute;
+    bottom: -60px; right: -40px;
+    width: 520px; height: 520px;
+    border-radius: 50%;
+    border: 1.5px solid rgba(181,212,244,0.18);
+  }
+  .capa::after {
+    content: '';
+    position: absolute;
+    bottom: 20px; right: 100px;
+    width: 300px; height: 300px;
+    border-radius: 50%;
+    border: 1px solid rgba(181,212,244,0.12);
+  }
+
+  .capa-label {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--azul);
+    margin-bottom: 20px;
+  }
+
+  .capa h1 {
+    font-size: 52px;
+    font-weight: 300;
+    line-height: 1.1;
+    letter-spacing: -1px;
+    margin-bottom: 12px;
+    max-width: 640px;
+  }
+
+  .capa h1 span {
+    color: var(--terra-light);
+    font-weight: 500;
+  }
+
+  .capa-sub {
+    font-size: 17px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.65);
+    max-width: 520px;
+    margin-bottom: 48px;
+    line-height: 1.5;
+  }
+
+  .capa-tags {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .capa-tag {
+    padding: 6px 14px;
+    border: 1px solid rgba(181,212,244,0.3);
+    border-radius: 20px;
+    font-size: 12px;
+    color: var(--azul);
+    letter-spacing: 0.5px;
+  }
+
+  .logo-capa {
+    position: absolute;
+    top: 48px; left: 64px;
+    font-size: 28px;
+    font-weight: 500;
+    color: var(--branco);
+    letter-spacing: -0.5px;
+  }
+  .logo-capa span {
+    color: var(--azul);
+  }
+  .logo-capa sub {
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+    display: block;
+    margin-top: -2px;
+    font-weight: 400;
+  }
+
+  /* ── MENSAGEM CENTRAL ── */
+  .mensagem {
+    background: var(--terra);
+    color: var(--branco);
+    padding: 64px;
+    text-align: center;
+  }
+
+  .mensagem blockquote {
+    font-size: 26px;
+    font-weight: 300;
+    line-height: 1.35;
+    max-width: 780px;
+    margin: 0 auto;
+    letter-spacing: -0.3px;
+  }
+
+  .mensagem blockquote strong {
+    font-weight: 600;
+  }
+
+  /* ── SECTION GENÉRICA ── */
+  .section {
+    padding: 72px 64px;
+    background: var(--branco);
+    border-bottom: 1px solid var(--cinza-1);
+  }
+
+  .section.cinza { background: var(--cinza-0); }
+  .section.azul-claro { background: #EBF4FC; }
+  .section.terra-claro { background: #F7EDE4; }
+
+  .section-inner { max-width: 960px; margin: 0 auto; }
+
+  .section-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--azul-mid);
+    margin-bottom: 12px;
+  }
+
+  .section-label.terra { color: var(--terra); }
+
+  h2.section-title {
+    font-size: 34px;
+    font-weight: 300;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+    color: var(--texto);
+    margin-bottom: 32px;
+  }
+
+  h2.section-title strong { font-weight: 600; }
+
+  p.lead {
+    font-size: 17px;
+    color: var(--texto-sec);
+    max-width: 680px;
+    line-height: 1.7;
+    margin-bottom: 40px;
+  }
+
+  /* ── GRID PROBLEMAS ── */
+  .grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  .grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+
+  .card {
+    background: var(--branco);
+    border: 1px solid var(--cinza-1);
+    border-radius: 12px;
+    padding: 28px;
+  }
+
+  .card.azul {
+    background: #EBF4FC;
+    border-color: #C2DEFA;
+  }
+
+  .card.terra {
+    background: #F7EDE4;
+    border-color: #E3C4A8;
+  }
+
+  .card.verde {
+    background: #EAF3EC;
+    border-color: #B3D9BC;
+  }
+
+  .card h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--texto);
+    margin-bottom: 10px;
+    line-height: 1.3;
+  }
+
+  .card p {
+    font-size: 14px;
+    color: var(--texto-sec);
+    line-height: 1.65;
+  }
+
+  .card-icon {
+    width: 40px; height: 40px;
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 16px;
+    font-size: 20px;
+  }
+
+  .icon-azul { background: #C2DEFA; }
+  .icon-terra { background: #E3C4A8; }
+  .icon-verde { background: #B3D9BC; }
+
+  /* ── DIMENSÕES ── */
+  .dimensoes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    border: 1px solid var(--cinza-1);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .dimensao-item {
+    padding: 36px;
+    border-right: 1px solid var(--cinza-1);
+    border-bottom: 1px solid var(--cinza-1);
+  }
+
+  .dimensao-item:nth-child(2n) { border-right: none; }
+  .dimensao-item:nth-child(3),
+  .dimensao-item:nth-child(4) { border-bottom: none; }
+
+  .dimensao-num {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: var(--azul-mid);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  .dimensao-item h3 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 12px;
+    color: var(--texto);
+  }
+
+  .dimensao-item p {
+    font-size: 14px;
+    color: var(--texto-sec);
+    line-height: 1.65;
+  }
+
+  /* ── PRODUTOS ── */
+  .produto-card {
+    display: flex;
+    gap: 20px;
+    padding: 28px;
+    background: var(--branco);
+    border: 1px solid var(--cinza-1);
+    border-radius: 12px;
+    margin-bottom: 16px;
+  }
+
+  .produto-num {
+    font-size: 42px;
+    font-weight: 300;
+    color: var(--cinza-2);
+    min-width: 52px;
+    line-height: 1;
+    padding-top: 4px;
+  }
+
+  .produto-content h3 {
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--texto);
+  }
+
+  .produto-content p {
+    font-size: 14px;
+    color: var(--texto-sec);
+    line-height: 1.65;
+  }
+
+  /* ── ETAPAS ── */
+  .etapas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    position: relative;
+  }
+
+  .etapa {
+    padding: 32px 24px;
+    position: relative;
+  }
+
+  .etapa:not(:last-child)::after {
+    content: '→';
+    position: absolute;
+    right: -10px;
+    top: 40px;
+    font-size: 20px;
+    color: var(--azul-mid);
+    z-index: 1;
+  }
+
+  .etapa-num {
+    width: 48px; height: 48px;
+    border-radius: 50%;
+    background: var(--azul-dark);
+    color: var(--branco);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+
+  .etapa h3 {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: var(--texto);
+    line-height: 1.3;
+  }
+
+  .etapa ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .etapa ul li {
+    font-size: 13px;
+    color: var(--texto-sec);
+    padding: 3px 0;
+    padding-left: 14px;
+    position: relative;
+  }
+
+  .etapa ul li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--cinza-2);
+  }
+
+  /* ── CASOS ── */
+  .caso-header {
+    display: flex;
+    gap: 48px;
+    align-items: flex-start;
+    margin-bottom: 40px;
+  }
+
+  .caso-badge {
+    background: var(--azul-dark);
+    color: var(--branco);
+    padding: 14px 24px;
+    border-radius: 8px;
+    min-width: 200px;
+    text-align: center;
+  }
+
+  .caso-badge.terra-bg {
+    background: var(--terra);
+  }
+
+  .caso-badge .municipio {
+    font-size: 10px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.65);
+    margin-bottom: 6px;
+  }
+
+  .caso-badge .nome {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--branco);
+  }
+
+  .caso-badge .tipo {
+    font-size: 12px;
+    margin-top: 8px;
+    color: rgba(255,255,255,0.55);
+  }
+
+  .caso-desc {
+    flex: 1;
+  }
+
+  .caso-desc h3 {
+    font-size: 22px;
+    font-weight: 300;
+    color: var(--texto);
+    margin-bottom: 14px;
+    line-height: 1.3;
+  }
+
+  .caso-desc p {
+    font-size: 14px;
+    color: var(--texto-sec);
+    line-height: 1.7;
+  }
+
+  .tags-produtos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 20px;
+  }
+
+  .tag-produto {
+    padding: 5px 12px;
+    background: var(--cinza-1);
+    border-radius: 20px;
+    font-size: 12px;
+    color: var(--texto-sec);
+    font-weight: 500;
+  }
+
+  .tag-produto.azul {
+    background: #C2DEFA;
+    color: var(--azul-dark);
+  }
+
+  .tag-produto.terra {
+    background: #E3C4A8;
+    color: var(--terra-dark);
+  }
+
+  /* ── TABELA ── */
+  .tabela-wrapper {
+    overflow-x: auto;
+    border-radius: 12px;
+    border: 1px solid var(--cinza-1);
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13.5px;
+  }
+
+  table th {
+    background: var(--azul-dark);
+    color: var(--branco);
+    padding: 14px 18px;
+    text-align: left;
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+  }
+
+  table th:first-child { border-radius: 0; }
+
+  table td {
+    padding: 12px 18px;
+    border-bottom: 1px solid var(--cinza-1);
+    color: var(--texto);
+    vertical-align: top;
+  }
+
+  table tr:last-child td { border-bottom: none; }
+
+  table tr:nth-child(even) td { background: var(--cinza-0); }
+
+  .check { color: var(--verde); font-weight: 600; }
+  .partial { color: var(--terra); font-size: 12px; }
+
+  /* ── VALOR GESTORES ── */
+  .valor-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .valor-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0;
+    border: 1px solid var(--cinza-1);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .valor-dor {
+    background: #FEF4F0;
+    padding: 16px;
+    font-size: 13px;
+    color: var(--terra-dark);
+    font-weight: 500;
+    border-right: 1px solid var(--cinza-1);
+  }
+
+  .valor-entrega {
+    background: var(--branco);
+    padding: 16px;
+    font-size: 13px;
+    color: var(--texto-sec);
+    border-right: 1px solid var(--cinza-1);
+  }
+
+  .valor-beneficio {
+    background: #EBF4FC;
+    padding: 16px;
+    font-size: 13px;
+    color: var(--azul-dark);
+  }
+
+  /* ── FRASES DE IMPACTO ── */
+  .frases {
+    background: var(--azul-dark);
+    color: var(--branco);
+    padding: 80px 64px;
+  }
+
+  .frases-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 32px;
+    max-width: 960px;
+    margin: 40px auto 0;
+  }
+
+  .frase-item {
+    padding: 28px;
+    border: 1px solid rgba(181,212,244,0.2);
+    border-radius: 12px;
+  }
+
+  .frase-item p {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.5;
+    color: rgba(255,255,255,0.85);
+  }
+
+  .frase-item p strong {
+    font-weight: 600;
+    color: var(--azul);
+  }
+
+  /* ── PRÓXIMOS PASSOS ── */
+  .passos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 40px;
+  }
+
+  .passo {
+    padding: 28px 24px;
+    background: var(--branco);
+    border: 1px solid var(--cinza-1);
+    border-radius: 12px;
+    border-top: 3px solid var(--terra);
+  }
+
+  .passo-num {
+    font-size: 32px;
+    font-weight: 300;
+    color: var(--terra);
+    margin-bottom: 12px;
+    line-height: 1;
+  }
+
+  .passo h3 {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--texto);
+  }
+
+  .passo p {
+    font-size: 13px;
+    color: var(--texto-sec);
+    line-height: 1.6;
+  }
+
+  /* ── CONCLUSÃO ── */
+  .conclusao {
+    background: var(--verde-dark);
+    color: var(--branco);
+    padding: 80px 64px;
+    text-align: center;
+  }
+
+  .conclusao h2 {
+    font-size: 38px;
+    font-weight: 300;
+    line-height: 1.2;
+    max-width: 720px;
+    margin: 0 auto 20px;
+    letter-spacing: -0.5px;
+  }
+
+  .conclusao h2 em {
+    font-style: normal;
+    color: var(--terra-light);
+    font-weight: 500;
+  }
+
+  .conclusao p {
+    font-size: 16px;
+    color: rgba(255,255,255,0.65);
+    max-width: 580px;
+    margin: 0 auto;
+    line-height: 1.7;
+  }
+
+  /* ── LISTA INLINE ── */
+  .lista-inline {
+    columns: 2;
+    column-gap: 40px;
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+  }
+
+  .lista-inline li {
+    font-size: 14px;
+    color: var(--texto-sec);
+    padding: 5px 0 5px 18px;
+    position: relative;
+    break-inside: avoid;
+  }
+
+  .lista-inline li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 13px;
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--azul-mid);
+  }
+
+  .lista-inline.terra li::before { background: var(--terra); }
+
+  /* ── DIVIDER ── */
+  .divider {
+    height: 3px;
+    background: linear-gradient(90deg, var(--azul-mid), var(--terra));
+    margin: 0;
+    border: none;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--cinza-4);
+    color: rgba(255,255,255,0.5);
+    padding: 32px 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+  }
+
+  footer strong { color: var(--branco); }
+
+  /* ── PRINT ── */
+  @media print {
+    .capa { min-height: auto; padding: 48px; }
+    .section { padding: 48px; }
+    .section.break-before { page-break-before: always; }
+  }
+
+  @media (max-width: 768px) {
+    .capa { padding: 40px 24px 48px; }
+    .capa h1 { font-size: 34px; }
+    .section { padding: 48px 24px; }
+    .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+    .etapas { grid-template-columns: 1fr 1fr; }
+    .passos { grid-template-columns: 1fr 1fr; }
+    .caso-header { flex-direction: column; }
+    .frases-grid { grid-template-columns: 1fr; }
+    .valor-grid { grid-template-columns: 1fr; }
+    .dimensoes { grid-template-columns: 1fr; }
+    .logo-capa { left: 24px; top: 32px; }
+    footer { flex-direction: column; gap: 8px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- CAPA -->
+<section class="capa">
+  <div class="logo-capa">PlanUrbi<span>.</span><sub>Mapeamento Inteligente</sub></div>
+  <div class="capa-label">Portfólio Institucional</div>
+  <h1>Inteligência territorial<br>para municípios <span>mais eficientes</span></h1>
+  <p class="capa-sub">Planejamento urbano com tecnologia, campo, participação social e legislação — aplicado em Barra de São Miguel e Craíbas.</p>
+  <div class="capa-tags">
+    <span class="capa-tag">Georreferenciamento</span>
+    <span class="capa-tag">Diagnóstico Territorial</span>
+    <span class="capa-tag">Plataforma Digital</span>
+    <span class="capa-tag">Plano Diretor</span>
+    <span class="capa-tag">Cadastro Imobiliário</span>
+    <span class="capa-tag">Participação Social</span>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- MENSAGEM CENTRAL -->
+<section class="mensagem">
+  <blockquote>"O Planurbi transforma o território municipal em <strong>dado</strong>, o dado em <strong>inteligência</strong> e a inteligência em <strong>decisão pública</strong>."</blockquote>
+</section>
+
+<!-- O QUE É -->
+<section class="section">
+  <div class="section-inner">
+    <p class="section-label">O programa</p>
+    <h2 class="section-title">Uma solução integrada para <strong>modernizar a gestão municipal</strong></h2>
+    <p class="lead">O Planurbi combina levantamento de campo, drones, georreferenciamento, diagnóstico territorial, plataforma digital, atualização normativa, participação social e capacitação técnica. Tudo integrado para que o gestor municipal tenha uma visão clara, atualizada e estratégica do território.</p>
+
+    <div class="grid-4">
+      <div class="card azul">
+        <div class="card-icon icon-azul">🗺️</div>
+        <h3>Tecnologia</h3>
+        <p>Drones, georreferenciamento, sensoriamento remoto e plataforma digital de gestão territorial.</p>
+      </div>
+      <div class="card azul">
+        <div class="card-icon icon-azul">📊</div>
+        <h3>Excelência</h3>
+        <p>Metodologia estruturada, produtos documentados e equipe técnica especializada em planejamento urbano.</p>
+      </div>
+      <div class="card azul">
+        <div class="card-icon icon-azul">🔍</div>
+        <h3>Conhecimento</h3>
+        <p>Diagnósticos integrados, mapas temáticos e leitura territorial com dados primários e secundários.</p>
+      </div>
+      <div class="card azul">
+        <div class="card-icon icon-azul">💡</div>
+        <h3>Inovação</h3>
+        <p>Transformação digital sustentável nas políticas urbanas, com capacitação das equipes municipais.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTEXTO E PROBLEMA -->
+<section class="section cinza">
+  <div class="section-inner">
+    <p class="section-label terra">O problema público</p>
+    <h2 class="section-title">O que <strong>impede os municípios</strong> de planejar bem</h2>
+    <p class="lead">Grande parte das prefeituras ainda opera com informações territoriais fragmentadas: planilhas antigas, mapas desatualizados, arquivos físicos e sistemas que não conversam entre si.</p>
+
+    <div class="dimensoes">
+      <div class="dimensao-item">
+        <div class="dimensao-num">Dificuldade 01</div>
+        <h3>Cadastro imobiliário desatualizado</h3>
+        <p>Dados de imóveis dispersos em planilhas antigas dificultam a arrecadação de IPTU, ITBI e taxas municipais com justiça fiscal.</p>
+      </div>
+      <div class="dimensao-item">
+        <div class="dimensao-num">Dificuldade 02</div>
+        <h3>Ausência de mapas técnicos confiáveis</h3>
+        <p>Sem cartografia atualizada, a prefeitura não consegue acompanhar a expansão urbana nem identificar áreas de risco ou interesse público.</p>
+      </div>
+      <div class="dimensao-item">
+        <div class="dimensao-num">Dificuldade 03</div>
+        <h3>Legislação urbanística defasada</h3>
+        <p>Planos Diretores e Códigos desatualizados geram insegurança jurídica e dificultam o controle do uso e ocupação do solo.</p>
+      </div>
+      <div class="dimensao-item">
+        <div class="dimensao-num">Dificuldade 04</div>
+        <h3>Baixa capacidade institucional</h3>
+        <p>Dependência de diagnósticos pontuais, pouca integração de dados e dificuldade de transformar informação em decisão de gestão.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIMENSÕES DO PLANURBI -->
+<section class="section azul-claro">
+  <div class="section-inner">
+    <p class="section-label">Como o Planurbi atua</p>
+    <h2 class="section-title">Quatro dimensões de <strong>atuação integrada</strong></h2>
+
+    <div class="grid-2">
+      <div class="card verde">
+        <div class="card-icon icon-verde">📍</div>
+        <h3>Dimensão Cadastral</h3>
+        <p>Levantamento, organização e georreferenciamento de imóveis, terrenos, edificações, lotes, infraestrutura urbana e elementos de interesse para a gestão municipal.</p>
+      </div>
+      <div class="card verde">
+        <div class="card-icon icon-verde">🌍</div>
+        <h3>Dimensão Territorial</h3>
+        <p>Produção de mapas, diagnósticos e leituras integradas sobre uso do solo, expansão urbana, equipamentos públicos, áreas ambientais, áreas de risco e dinâmicas socioeconômicas.</p>
+      </div>
+      <div class="card verde">
+        <div class="card-icon icon-verde">📋</div>
+        <h3>Dimensão Normativa</h3>
+        <p>Apoio à revisão ou elaboração de Plano Diretor, Código de Edificações, Código Tributário, Plano de Mobilidade, zoneamento e instrumentos urbanísticos complementares.</p>
+      </div>
+      <div class="card verde">
+        <div class="card-icon icon-verde">💻</div>
+        <h3>Dimensão Digital</h3>
+        <p>Implantação do Hub Planurbi — plataforma para acesso, consulta, filtragem, visualização e exportação de dados territoriais, fortalecendo a capacidade de gestão municipal.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUTOS -->
+<section class="section">
+  <div class="section-inner">
+    <p class="section-label">Entregas</p>
+    <h2 class="section-title">Os <strong>produtos do Planurbi</strong></h2>
+    <p class="lead">O Planurbi entrega um conjunto robusto de produtos que transformam dados dispersos em informação territorial estruturada, pronta para uso operacional pela prefeitura.</p>
+
+    <div class="produto-card">
+      <div class="produto-num">01</div>
+      <div class="produto-content">
+        <h3>Mapeamento Georreferenciado do Território</h3>
+        <p>Mapas técnicos e bases digitais com limites administrativos, uso do solo, aspectos físicos, cobertura vegetal, hidrografia, áreas de risco, equipamentos públicos e muito mais. Entregues em SHP, KMZ e PDF.</p>
+      </div>
+    </div>
+
+    <div class="produto-card">
+      <div class="produto-num">02</div>
+      <div class="produto-content">
+        <h3>Diagnóstico Inteligente do Município</h3>
+        <p>Relatório técnico com leitura integrada do território: infraestrutura, mobilidade, turismo, meio ambiente, vulnerabilidades socioespaciais e capacidade institucional. Base para políticas públicas orientadas por evidências.</p>
+      </div>
+    </div>
+
+    <div class="produto-card">
+      <div class="produto-num">03</div>
+      <div class="produto-content">
+        <h3>Mapeamento Cadastral Georreferenciado — MCG</h3>
+        <p>Levantamento físico de imóveis por equipes de campo com captura de imagens por drones, fichas de caracterização, georreferenciamento e banco de dados individualizado. Essencial para arrecadação, fiscalização e regularização.</p>
+      </div>
+    </div>
+
+    <div class="produto-card">
+      <div class="produto-num">04</div>
+      <div class="produto-content">
+        <h3>Plataforma Digital — Hub Planurbi</h3>
+        <p>Sistema de gestão de dados imobiliários com listagem de imóveis, filtros por bairro e tipo, exportação em CSV, visualização individual de imóvel com foto, coordenadas e características do lote.</p>
+      </div>
+    </div>
+
+    <div class="produto-card">
+      <div class="produto-num">05</div>
+      <div class="produto-content">
+        <h3>Plano Diretor Participativo</h3>
+        <p>Elaboração ou revisão com leitura técnica, comunitária e governamental: macrozoneamento, zoneamento urbano, parâmetros de uso do solo, instrumentos urbanísticos e minuta de projeto de lei.</p>
+      </div>
+    </div>
+
+    <div class="produto-card">
+      <div class="produto-num">06</div>
+      <div class="produto-content">
+        <h3>Código de Edificações</h3>
+        <p>Atualização ou elaboração com diretrizes para segurança, acessibilidade, parâmetros urbanísticos, regularização de edificações e sustentabilidade ambiental das construções.</p>
+      </div>
+    </div>
+
+    <div class="produto-card">
+      <div class="produto-num">07</div>
+      <div class="produto-content">
+        <h3>Código Tributário Municipal</h3>
+        <p>Revisão com foco em IPTU, ITBI, taxas municipais, base de cálculo, alíquotas, isenções e modernização da gestão fazendária — promovendo justiça fiscal.</p>
+      </div>
+    </div>
+
+    <div class="produto-card">
+      <div class="produto-num">08</div>
+      <div class="produto-content">
+        <h3>Plano ou Guia Estratégico de Mobilidade Urbana</h3>
+        <p>Diretrizes para circulação viária, transporte coletivo, mobilidade ativa, acessibilidade universal e conectividade entre bairros, centralidades e áreas de interesse econômico.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- METODOLOGIA -->
+<section class="section cinza">
+  <div class="section-inner">
+    <p class="section-label">Metodologia</p>
+    <h2 class="section-title">Como o Planurbi é <strong>implantado</strong></h2>
+    <p class="lead">A execução segue quatro macroetapas integradas, com equipe técnica dedicada e entregas rastreáveis em cada fase.</p>
+
+    <div class="etapas">
+      <div class="etapa">
+        <div class="etapa-num">1</div>
+        <h3>Mobilização e planejamento</h3>
+        <ul>
+          <li>Formação da equipe</li>
+          <li>Reuniões com gestores</li>
+          <li>Plano operacional</li>
+          <li>Alinhamento metodológico</li>
+          <li>Cronograma de execução</li>
+        </ul>
+      </div>
+      <div class="etapa">
+        <div class="etapa-num">2</div>
+        <h3>Diagnóstico territorial</h3>
+        <ul>
+          <li>Levantamento de dados</li>
+          <li>Oficinas participativas</li>
+          <li>Audiências públicas</li>
+          <li>Voos de drone</li>
+          <li>Mapas temáticos</li>
+        </ul>
+      </div>
+      <div class="etapa">
+        <div class="etapa-num">3</div>
+        <h3>Mapeamento e plataforma</h3>
+        <ul>
+          <li>Levantamento de campo</li>
+          <li>Fichas dos imóveis</li>
+          <li>Georreferenciamento</li>
+          <li>Banco de dados</li>
+          <li>Hub Planurbi</li>
+        </ul>
+      </div>
+      <div class="etapa">
+        <div class="etapa-num">4</div>
+        <h3>Legislação e planejamento</h3>
+        <ul>
+          <li>Plano Diretor</li>
+          <li>Código de Edificações</li>
+          <li>Código Tributário</li>
+          <li>Guia de Mobilidade</li>
+          <li>Minutas normativas</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CASO BARRA DE SÃO MIGUEL -->
+<section class="section">
+  <div class="section-inner">
+    <p class="section-label">Caso 1</p>
+    <h2 class="section-title">Planurbi <strong>Barra de São Miguel</strong></h2>
+
+    <div class="caso-header">
+      <div class="caso-badge">
+        <div class="municipio">Alagoas</div>
+        <div class="nome">Barra de<br>São Miguel</div>
+        <div class="tipo">Município litorâneo · Dinâmica turística</div>
+      </div>
+      <div class="caso-desc">
+        <h3>Planejamento para um município com forte pressão imobiliária e dinâmica turística</h3>
+        <p>A experiência de Barra de São Miguel demonstra a aplicação do Planurbi em um município litorâneo com expansão imobiliária, presença de condomínios, áreas de interesse ambiental e necessidade urgente de atualização dos instrumentos de planejamento. O projeto estruturou uma resposta integrada para toda a gestão territorial do município.</p>
+        <div class="tags-produtos">
+          <span class="tag-produto azul">Atlas / Mapas Temáticos</span>
+          <span class="tag-produto azul">Diagnóstico Inteligente</span>
+          <span class="tag-produto azul">MCG Georreferenciado</span>
+          <span class="tag-produto azul">Hub Planurbi</span>
+          <span class="tag-produto azul">Guia de Mobilidade</span>
+          <span class="tag-produto azul">Plano Diretor</span>
+          <span class="tag-produto azul">Código de Edificações</span>
+          <span class="tag-produto azul">Código Tributário</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid-3">
+      <div class="card">
+        <h3>Atlas e Mapas Temáticos</h3>
+        <p>Mapas de limites municipais, plano diretor vigente, aspectos ambientais, equipamentos públicos, atrativos turísticos, uso do solo, terrenos de marinha e vulnerabilidade socioespacial.</p>
+      </div>
+      <div class="card">
+        <h3>Diagnóstico Inteligente</h3>
+        <p>Leitura ampla com evolução urbana, verticalização, perfil socioeconômico, áreas de preservação permanente, geologia, declividade, recursos hídricos, habitação, saneamento e turismo sustentável.</p>
+      </div>
+      <div class="card">
+        <h3>Mapeamento Cadastral Georreferenciado</h3>
+        <p>Levantamento de bairros e empreendimentos (Altavistta, Arquipélago do Sol, Barra Mar, Recanto, Praia das Conchas, Praia Bonita) com arquivos KMZ e planilhas cadastrais consolidadas.</p>
+      </div>
+      <div class="card">
+        <h3>Hub Planurbi</h3>
+        <p>Sistema de gestão com login, seleção de município, listagem de imóveis com filtros, exportação CSV, visualização individual com foto, endereço e coordenadas do lote.</p>
+      </div>
+      <div class="card">
+        <h3>Instrumentos Normativos</h3>
+        <p>Plano Diretor, Código de Edificações e Código Tributário elaborados com base no diagnóstico territorial e leitura técnica integrada do município.</p>
+      </div>
+      <div class="card">
+        <h3>Guia de Mobilidade</h3>
+        <p>Diretrizes para circulação viária, mobilidade ativa, transporte e acessibilidade universal para um município com forte fluxo turístico e sazonalidade.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CASO CRAÍBAS -->
+<section class="section terra-claro">
+  <div class="section-inner">
+    <p class="section-label terra">Caso 2</p>
+    <h2 class="section-title">Planurbi <strong>Craíbas</strong></h2>
+
+    <div class="caso-header">
+      <div class="caso-badge terra-bg">
+        <div class="municipio">Alagoas · Agreste</div>
+        <div class="nome">Craíbas</div>
+        <div class="tipo">Município do Agreste · Ruralidade e mineração</div>
+      </div>
+      <div class="caso-desc">
+        <h3>Planejamento para um município do Agreste com ruralidade, povoados e atividade minerária</h3>
+        <p>A experiência de Craíbas é especialmente relevante para o Conagreste porque se aproxima da realidade de muitos municípios consorciados: territórios com sede urbana, povoados, áreas rurais, atividades econômicas específicas e demanda por ordenamento territorial. O Planurbi demonstrou sua capacidade de adaptar a metodologia a essa realidade.</p>
+        <div class="tags-produtos">
+          <span class="tag-produto terra">Leitura Territorial</span>
+          <span class="tag-produto terra">Mobilização Social</span>
+          <span class="tag-produto terra">Oficinas Participativas</span>
+          <span class="tag-produto terra">Mapeamento Georreferenciado</span>
+          <span class="tag-produto terra">Diagnóstico Inteligente</span>
+          <span class="tag-produto terra">Plano Diretor</span>
+          <span class="tag-produto terra">Voos de Drone</span>
+          <span class="tag-produto terra">Cartografia Temática</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid-2">
+      <div class="card">
+        <h3>Leitura territorial e caracterização municipal</h3>
+        <p>Levantamento de informações nas dimensões física, territorial, socioeconômica, ambiental e institucional. Combinando fontes secundárias oficiais, levantamentos primários, imagens de satélite e análise de mudanças territoriais em série temporal.</p>
+      </div>
+      <div class="card">
+        <h3>Participação social descentralizada</h3>
+        <p>Oficinas participativas e reuniões temáticas realizadas em diferentes localidades: Centro de Craíbas, Povoado Pau Ferro, Distrito de Folha Miúda e Lagoa do Algodão. A leitura técnica foi complementada pela leitura comunitária.</p>
+      </div>
+      <div class="card">
+        <h3>Mapeamento Georreferenciado do Território</h3>
+        <p>Registros georreferenciados, evidências de campo e mapas temáticos de localização municipal, localidades, povados, declividade, geologia, hipsometria, pedologia, hidrografia, geomorfologia e vegetação.</p>
+      </div>
+      <div class="card">
+        <h3>Plano Diretor Participativo</h3>
+        <p>Elaboração fundamentada em leitura técnica e comunitária, com macrozoneamento adequado à realidade do Agreste, contemplando zona urbana, rural e distrital — com atenção às atividades produtivas e de mineração locais.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MATRIZ DE PRODUTOS -->
+<section class="section">
+  <div class="section-inner">
+    <p class="section-label">Evidências</p>
+    <h2 class="section-title"><strong>Matriz de produtos</strong> por município</h2>
+    <p class="lead">Visão comparativa dos produtos entregues nas duas experiências já executadas pelo Planurbi.</p>
+
+    <div class="tabela-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Produto / Frente</th>
+            <th>Barra de São Miguel</th>
+            <th>Craíbas</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Mobilização inicial</td><td class="check">✔ Sim</td><td class="check">✔ Sim</td></tr>
+          <tr><td>Diagnóstico territorial</td><td class="check">✔ Sim</td><td class="check">✔ Sim</td></tr>
+          <tr><td>Diagnóstico Inteligente</td><td class="check">✔ Sim</td><td class="check">✔ Sim</td></tr>
+          <tr><td>Atlas / Mapas temáticos</td><td class="check">✔ Sim</td><td class="check">✔ Sim</td></tr>
+          <tr><td>Mapeamento Cadastral Georreferenciado</td><td class="check">✔ Sim</td><td class="partial">Em estruturação conforme escopo</td></tr>
+          <tr><td>Plataforma de acesso / Hub Planurbi</td><td class="check">✔ Sim</td><td class="partial">Frente tecnológica prevista</td></tr>
+          <tr><td>Plano Diretor</td><td class="check">✔ Sim</td><td class="check">✔ Sim</td></tr>
+          <tr><td>Código de Edificações</td><td class="check">✔ Sim</td><td class="partial">Conforme escopo</td></tr>
+          <tr><td>Código Tributário</td><td class="check">✔ Sim</td><td class="partial">Conforme escopo</td></tr>
+          <tr><td>Mobilidade urbana</td><td class="check">✔ Guia entregue</td><td class="partial">Conforme Plano Diretor</td></tr>
+          <tr><td>Oficinas participativas</td><td class="check">✔ Sim</td><td class="check">✔ Sim, descentralizado</td></tr>
+          <tr><td>Voos de drone</td><td class="check">✔ Sim</td><td class="check">✔ Sim</td></tr>
+          <tr><td>Mapas em SHP / KMZ / PDF</td><td class="check">✔ Sim</td><td class="check">✔ Sim</td></tr>
+          <tr><td>Entregas organizadas em Drive</td><td class="check">✔ Sim</td><td class="check">✔ Sim</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- VALOR PARA GESTORES -->
+<section class="section cinza">
+  <div class="section-inner">
+    <p class="section-label">Impacto direto</p>
+    <h2 class="section-title">Do <strong>problema à solução</strong> — o valor para o gestor municipal</h2>
+    <p class="lead">Cada entrega do Planurbi responde diretamente a uma dor real da gestão municipal, com benefícios concretos e mensuráveis.</p>
+
+    <div class="valor-grid">
+      <div class="valor-item">
+        <div class="valor-dor">Cadastro desatualizado</div>
+        <div class="valor-entrega">MCG + base georreferenciada</div>
+        <div class="valor-beneficio">Melhor arrecadação e fiscalização</div>
+      </div>
+      <div class="valor-item">
+        <div class="valor-dor">Falta de mapas confiáveis</div>
+        <div class="valor-entrega">Cartografia temática</div>
+        <div class="valor-beneficio">Planejamento territorial qualificado</div>
+      </div>
+      <div class="valor-item">
+        <div class="valor-dor">Baixa integração de dados</div>
+        <div class="valor-entrega">Hub Planurbi</div>
+        <div class="valor-beneficio">Gestão centralizada e digital</div>
+      </div>
+      <div class="valor-item">
+        <div class="valor-dor">Plano Diretor defasado</div>
+        <div class="valor-entrega">Revisão / elaboração participativa</div>
+        <div class="valor-beneficio">Segurança urbanística e legal</div>
+      </div>
+      <div class="valor-item">
+        <div class="valor-dor">Código Tributário desatualizado</div>
+        <div class="valor-entrega">Revisão tributária completa</div>
+        <div class="valor-beneficio">Justiça fiscal e eficiência arrecadatória</div>
+      </div>
+      <div class="valor-item">
+        <div class="valor-dor">Decisões sem evidência</div>
+        <div class="valor-entrega">Diagnóstico Inteligente</div>
+        <div class="valor-beneficio">Priorização técnica de investimentos</div>
+      </div>
+      <div class="valor-item">
+        <div class="valor-dor">Falta de participação social</div>
+        <div class="valor-entrega">Oficinas e audiências públicas</div>
+        <div class="valor-beneficio">Legitimidade e gestão democrática</div>
+      </div>
+      <div class="valor-item">
+        <div class="valor-dor">Visão municipal isolada</div>
+        <div class="valor-entrega">Modelo consorciado regional</div>
+        <div class="valor-beneficio">Escala regional e padronização</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OPORTUNIDADE CONAGRESTE -->
+<section class="section azul-claro">
+  <div class="section-inner">
+    <p class="section-label">Para o Conagreste</p>
+    <h2 class="section-title">Uma <strong>estratégia regional</strong> de inteligência territorial</h2>
+    <p class="lead">Para o Conagreste, o Planurbi pode ser estruturado como uma solução de inteligência territorial consorciada, permitindo que os municípios consorciados tenham acesso a uma metodologia comum, bases territoriais qualificadas e ferramentas digitais para melhorar a gestão.</p>
+
+    <div class="grid-2">
+      <div>
+        <h3 style="font-size:17px; font-weight:600; margin-bottom:16px; color:var(--texto);">O Planurbi ajuda os municípios a:</h3>
+        <ul class="lista-inline">
+          <li>Modernizar o cadastro territorial</li>
+          <li>Atualizar informações urbanas e rurais</li>
+          <li>Fortalecer o planejamento urbano</li>
+          <li>Revisar leis municipais</li>
+          <li>Melhorar a arrecadação com justiça fiscal</li>
+          <li>Apoiar a regularização territorial</li>
+          <li>Qualificar a fiscalização</li>
+          <li>Estruturar plataformas digitais</li>
+          <li>Capacitar equipes municipais</li>
+          <li>Produzir diagnósticos e mapas</li>
+        </ul>
+      </div>
+      <div>
+        <h3 style="font-size:17px; font-weight:600; margin-bottom:16px; color:var(--texto);">A atuação consorciada permite:</h3>
+        <ul class="lista-inline terra">
+          <li>Maior escala de implantação</li>
+          <li>Padronização metodológica regional</li>
+          <li>Racionalização de custos</li>
+          <li>Base regional de dados territoriais</li>
+          <li>Fortalecimento técnico das equipes</li>
+          <li>Visão integrada do território regional</li>
+          <li>Comparabilidade entre municípios</li>
+          <li>Cooperação intermunicipal qualificada</li>
+          <li>Suporte técnico compartilhado</li>
+          <li>Sustentabilidade da solução</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRÓXIMOS PASSOS -->
+<section class="section">
+  <div class="section-inner">
+    <p class="section-label">Avanços</p>
+    <h2 class="section-title">Próximos <strong>passos recomendados</strong></h2>
+
+    <div class="passos">
+      <div class="passo">
+        <div class="passo-num">01</div>
+        <h3>Reunião institucional</h3>
+        <p>Apresentação do Planurbi como solução consorciada com foco na modernização da gestão territorial dos municípios membros.</p>
+      </div>
+      <div class="passo">
+        <div class="passo-num">02</div>
+        <h3>Demonstração técnica</h3>
+        <p>Apresentação de mapas, diagnósticos, prints anonimizados do Hub Planurbi e evidências dos projetos já executados.</p>
+      </div>
+      <div class="passo">
+        <div class="passo-num">03</div>
+        <h3>Municípios-piloto</h3>
+        <p>Seleção de 2 a 4 municípios com perfis distintos: pressão urbana, potencial tributário, necessidade de Plano Diretor e territórios rurais.</p>
+      </div>
+      <div class="passo">
+        <div class="passo-num">04</div>
+        <h3>Proposta executiva</h3>
+        <p>Elaboração de proposta modular com escopo, produtos, cronograma, equipe, orçamento e estratégia de expansão regional.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FRASES DE IMPACTO -->
+<section class="frases">
+  <div style="max-width:960px; margin:0 auto;">
+    <p class="section-label" style="color:var(--azul);">Planurbi em síntese</p>
+    <h2 style="font-size:34px; font-weight:300; line-height:1.2; letter-spacing:-0.5px;">O que o Planurbi representa<br><strong style="font-weight:600; color:var(--terra-light);">para os municípios</strong></h2>
+    <div class="frases-grid">
+      <div class="frase-item">
+        <p><strong>Do imóvel ao território. Do território à decisão pública.</strong></p>
+      </div>
+      <div class="frase-item">
+        <p>Uma plataforma de inteligência territorial para municípios mais <strong>organizados, sustentáveis e eficientes.</strong></p>
+      </div>
+      <div class="frase-item">
+        <p><strong>Planejar melhor começa por conhecer melhor o território.</strong></p>
+      </div>
+      <div class="frase-item">
+        <p>Mapas, dados e legislação integrados para uma <strong>nova gestão municipal.</strong></p>
+      </div>
+      <div class="frase-item">
+        <p>O Planurbi entrega ao gestor aquilo que muitas prefeituras ainda não têm: uma <strong>visão clara, atualizada e estratégica do território.</strong></p>
+      </div>
+      <div class="frase-item">
+        <p><strong>Dados territoriais, tecnologia e planejamento</strong> para transformar a gestão municipal.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONCLUSÃO -->
+<section class="conclusao">
+  <h2>Com o Planurbi, o município passa a operar com uma <em>visão integrada do território</em></h2>
+  <p style="margin-top:24px;">O Planurbi é uma solução madura, modular e replicável. As experiências de Barra de São Miguel e Craíbas demonstram que a metodologia se adapta a diferentes realidades, combinando diagnóstico, cartografia, campo, tecnologia, participação social e instrumentos normativos.</p>
+</section>
+
+<footer>
+  <div><strong>PlanUrbi</strong> — Mapeamento Inteligente · planurbi.com.br</div>
+  <div>Portfólio Institucional para o Conagreste · 2025</div>
+</footer>
+
+</body>
+</html>
